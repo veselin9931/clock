@@ -5,7 +5,12 @@
     <div class="digitalTime">
         <div>{{hour}} : &nbsp;</div>
         <div>{{minute}} : &nbsp;</div>
-        <div>{{second}} : &nbsp;</div>
-        <div class="ampm">{{ampm}}</div>
+        <div>{{second}} &nbsp;</div>
+        <div *ngIf="visible" class="ampm">{{ampm}}</div>
     </div>
+    <select [(ngModel)]="selectedFormat" >
+        <option *ngFor="let format of formats" [value]="format.id">
+          {{ format.value }}
+        </option>
+  </select>   
 </div>

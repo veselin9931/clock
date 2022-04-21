@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { ClockyComponent } from './digital-clock/clocky.component';
 
 
@@ -7,7 +9,7 @@ import { ClockyComponent } from './digital-clock/clocky.component';
   declarations: [
     ClockyComponent
   ],
-  imports: [
+  imports: [BrowserModule, FormsModule
   ],
   exports: [
     ClockyComponent
